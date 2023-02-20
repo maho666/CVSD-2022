@@ -1,0 +1,105 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : core
+Version: R-2020.09-SP5
+Date   : Tue Nov  8 10:04:36 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: conv_counter_r_reg[0]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: conv_result_r_reg[14]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  core               tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  conv_counter_r_reg[0]/CK (DFFRHQX8)                     0.00 #     0.50 r
+  conv_counter_r_reg[0]/Q (DFFRHQX8)                      0.24       0.74 r
+  U6040/Y (INVX12)                                        0.06       0.80 f
+  U13332/Y (OAI33X2)                                      0.31       1.11 r
+  U6160/Y (BUFX6)                                         0.18       1.29 r
+  U7211/Y (NAND2X8)                                       0.09       1.38 f
+  U5550/Y (CLKINVX12)                                     0.08       1.46 r
+  U5922/Y (AND2X8)                                        0.12       1.58 r
+  U13340/Y (AOI211X2)                                     0.09       1.67 f
+  U13304/Y (AOI33X2)                                      0.25       1.92 r
+  U7114/Y (BUFX12)                                        0.19       2.11 r
+  U5008/Y (INVX16)                                        0.06       2.17 f
+  U6651/Y (CLKAND2X12)                                    0.13       2.30 f
+  U6378/Y (BUFX20)                                        0.12       2.42 f
+  U5804/Y (NAND2X8)                                       0.08       2.50 r
+  U4878/Y (INVX16)                                        0.08       2.57 f
+  U5620/Y (CLKINVX12)                                     0.07       2.65 r
+  U4733/Y (INVX20)                                        0.06       2.71 f
+  U6965/Y (AO22X4)                                        0.29       3.00 f
+  U4923/Y (NOR4X8)                                        0.13       3.13 r
+  U6243/Y (AOI21X4)                                       0.11       3.24 f
+  U4617/Y (OR3X6)                                         0.22       3.46 f
+  U6840/Y (NOR2X8)                                        0.10       3.56 r
+  U6841/Y (NAND4X8)                                       0.12       3.68 f
+  r1239/A[3] (core_DW01_add_20)                           0.00       3.68 f
+  r1239/U195/Y (NOR2X8)                                   0.15       3.83 r
+  r1239/U201/Y (OAI21X4)                                  0.12       3.95 f
+  r1239/U189/Y (AO21X4)                                   0.23       4.18 f
+  r1239/U148/Y (XNOR2X4)                                  0.17       4.34 f
+  r1239/SUM[4] (core_DW01_add_20)                         0.00       4.34 f
+  add_0_root_add_655_2/B[4] (core_DW01_add_33)            0.00       4.34 f
+  add_0_root_add_655_2/U152/Y (OR2X8)                     0.21       4.55 f
+  add_0_root_add_655_2/U186/Y (AOI21X4)                   0.14       4.69 r
+  add_0_root_add_655_2/U67/Y (OAI21X4)                    0.13       4.82 f
+  add_0_root_add_655_2/U52/Y (AOI21X4)                    0.17       4.99 r
+  add_0_root_add_655_2/U154/Y (INVX8)                     0.12       5.10 f
+  add_0_root_add_655_2/U170/Y (AOI21X4)                   0.13       5.24 r
+  add_0_root_add_655_2/U169/Y (XOR2X4)                    0.17       5.40 r
+  add_0_root_add_655_2/SUM[9] (core_DW01_add_33)          0.00       5.40 r
+  U6775/Y (INVX12)                                        0.13       5.53 f
+  U13360/Y (AOI211X2)                                     0.26       5.80 r
+  add_701_aco/B[9] (core_DW01_add_78)                     0.00       5.80 r
+  add_701_aco/U148/Y (BUFX8)                              0.18       5.97 r
+  add_701_aco/U179/Y (NOR2X8)                             0.08       6.05 f
+  add_701_aco/U65/Y (OAI21X4)                             0.17       6.22 r
+  add_701_aco/U142/Y (BUFX16)                             0.14       6.36 r
+  add_701_aco/U41/Y (AOI21X4)                             0.08       6.44 f
+  add_701_aco/U231/Y (OAI21X4)                            0.10       6.54 r
+  add_701_aco/U187/Y (INVX8)                              0.09       6.63 f
+  add_701_aco/U203/Y (CLKINVX12)                          0.06       6.69 r
+  add_701_aco/U215/Y (AOI21X4)                            0.08       6.77 f
+  add_701_aco/U156/Y (XNOR2X4)                            0.15       6.92 f
+  add_701_aco/SUM[14] (core_DW01_add_78)                  0.00       6.92 f
+  U7510/Y (AOI22X4)                                       0.20       7.12 r
+  U6995/Y (NAND4X4)                                       0.14       7.25 f
+  conv_result_r_reg[14]/D (DFFRHQX8)                      0.00       7.25 f
+  data arrival time                                                  7.25
+
+  clock i_clk (rise edge)                                 7.00       7.00
+  clock network delay (ideal)                             0.50       7.50
+  clock uncertainty                                      -0.10       7.40
+  conv_result_r_reg[14]/CK (DFFRHQX8)                     0.00       7.40 r
+  library setup time                                     -0.15       7.25
+  data required time                                                 7.25
+  --------------------------------------------------------------------------
+  data required time                                                 7.25
+  data arrival time                                                 -7.25
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
